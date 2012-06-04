@@ -137,6 +137,8 @@ $defaults['privacy'] = 0;
 * More options can be found in config.default.php.
 */
 
+$serviceoverrides['User'] = 'SemanticScuttle_Service_JoomlaUser';
+
 /****************************
  * External user authentication
  */
@@ -150,7 +152,7 @@ $defaults['privacy'] = 0;
  *
  * @var string
  */
-$authType = "DB";
+$authType = "Custom";
 
 /**
  * Options for external authentication via PEAR Auth
@@ -169,5 +171,5 @@ $authOptions = array(
  *
  * @var boolean
  */
-$authDebug = true;
+$authDebug = false;
 ?>
