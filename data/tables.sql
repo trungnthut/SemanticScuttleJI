@@ -5,7 +5,7 @@
 -- Table structure for table `sc_bookmarks`
 -- 
 
-CREATE TABLE `sc_bookmarks` (
+CREATE TABLE `jos_sc_bookmarks` (
   `bId` int(11) NOT NULL auto_increment,
   `uId` int(11) NOT NULL default '0',
   `bIp` varchar(40) default NULL,
@@ -32,7 +32,7 @@ CREATE TABLE `sc_bookmarks` (
 -- Table structure for table `sc_tags`
 -- 
 
-CREATE TABLE `sc_tags` (
+CREATE TABLE `jos_sc_tags` (
   `tId` int(11) NOT NULL auto_increment,
   `tag` varchar(100) NOT NULL default '',
   `uId` int(11) NOT NULL default '0',
@@ -47,7 +47,7 @@ CREATE TABLE `sc_tags` (
 -- Table structure for table `sc_bookmarks2tags`
 -- 
 
-CREATE TABLE `sc_bookmarks2tags` (
+CREATE TABLE `jos_sc_bookmarks2tags` (
   `id` int(11) NOT NULL auto_increment,
   `bId` int(11) NOT NULL default '0',
   `tag` varchar(100) NOT NULL default '',
@@ -62,7 +62,7 @@ CREATE TABLE `sc_bookmarks2tags` (
 -- Table structure for table `sc_users`
 -- 
 
-CREATE TABLE `sc_users` (
+CREATE TABLE `jos_sc_users` (
   `uId` int(11) NOT NULL auto_increment,
   `username` varchar(25) NOT NULL default '',
   `password` varchar(40) NOT NULL default '',
@@ -79,7 +79,7 @@ CREATE TABLE `sc_users` (
 
 -- --------------------------------------------------------
 
-CREATE TABLE `sc_users_sslclientcerts` (
+CREATE TABLE `jos_sc_users_sslclientcerts` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `uId` INT NOT NULL ,
   `sslSerial` VARCHAR( 32 ) NOT NULL ,
@@ -93,7 +93,7 @@ CREATE TABLE `sc_users_sslclientcerts` (
 -- Table structure for table `sc_watched`
 -- 
 
-CREATE TABLE `sc_watched` (
+CREATE TABLE `jos_sc_watched` (
   `wId` int(11) NOT NULL auto_increment,
   `uId` int(11) NOT NULL default '0',
   `watched` int(11) NOT NULL default '0',
@@ -107,7 +107,7 @@ CREATE TABLE `sc_watched` (
 -- Table structure for table `sc_tags2tags`
 -- 
 
-CREATE TABLE `sc_tags2tags` (
+CREATE TABLE `jos_sc_tags2tags` (
   `ttId` int(11) NOT NULL auto_increment,
   `tag1` varchar(100) NOT NULL default '',
   `tag2` varchar(100) NOT NULL default '',
@@ -123,7 +123,7 @@ CREATE TABLE `sc_tags2tags` (
 -- Table structure for table `sc_tagsstats`
 -- 
 
-CREATE TABLE `sc_tagsstats` (
+CREATE TABLE `jos_sc_tagsstats` (
   `tstId` int(11) NOT NULL auto_increment,
   `tag1` varchar(100) NOT NULL default '',
   `relationType` varchar(32) NOT NULL default '',
@@ -141,7 +141,7 @@ CREATE TABLE `sc_tagsstats` (
 -- Table structure for table `sc_tagscache`
 -- 
 
-CREATE TABLE `sc_tagscache` (
+CREATE TABLE `jos_sc_tagscache` (
   `tcId` int(11) NOT NULL auto_increment,
   `tag1` varchar(100) NOT NULL default '',
   `tag2` varchar(100) NOT NULL default '',
@@ -157,7 +157,7 @@ CREATE TABLE `sc_tagscache` (
 -- Table structure for table `sc_commondescription`
 -- 
 
-CREATE TABLE `sc_commondescription` (
+CREATE TABLE `jos_sc_commondescription` (
   `cdId` int(11) NOT NULL auto_increment,
   `uId` int(11) NOT NULL default '0',
   `tag` varchar(100) NOT NULL default '',
@@ -176,7 +176,7 @@ CREATE TABLE `sc_commondescription` (
 -- Table structure for table `sc_searchhistory`
 -- 
 
-CREATE TABLE `sc_searchhistory` (
+CREATE TABLE `jos_sc_searchhistory` (
   `shId` int(11) NOT NULL auto_increment,
   `shTerms` varchar(255) NOT NULL default '',
   `shRange` varchar(32) NOT NULL default '',
@@ -187,7 +187,7 @@ CREATE TABLE `sc_searchhistory` (
 ) CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
 
-CREATE TABLE `sc_votes` (
+CREATE TABLE `jos_sc_votes` (
   `bId` INT NOT NULL ,
   `uId` INT NOT NULL ,
   `vote` INT( 2 ) NOT NULL ,
@@ -197,7 +197,7 @@ CREATE TABLE `sc_votes` (
 ) CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
 
-CREATE TABLE `sc_version` (
+CREATE TABLE `jos_sc_version` (
   `schema_version` int(11) NOT NULL
 ) DEFAULT CHARSET=utf8;
-INSERT INTO `sc_version` (`schema_version`) VALUES ('6');
+INSERT INTO `jos_sc_version` (`schema_version`) VALUES ('6');

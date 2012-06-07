@@ -13,7 +13,7 @@
  *
  * @var string
  */
-$sitename = 'SemanticScuttle';
+$sitename = 'Chia se link';
 
 /**
  * The welcome message on the homepage.
@@ -46,7 +46,7 @@ $cleanurls = false;
  *
  * @var boolean
  */
-$debugMode = true;
+$debugMode = false;
 
 
 /***************************************************
@@ -82,7 +82,7 @@ $dbpass = '123456';
  *
  * @var string
  */
-$dbname = 'semanticscuttle';
+$dbname = 'doclib';
 
 /**
  * Database hostname/IP
@@ -90,6 +90,14 @@ $dbname = 'semanticscuttle';
  * @var string
  */
 $dbhost = '127.0.0.1';
+
+/**
+ * Database table name prefix.
+ * Do not use "-" since this is badly handled by MySQL.
+ *
+ * @var string
+ */
+$tableprefix = 'jos_sc_';
 
 
 /***************************************************
@@ -162,7 +170,7 @@ $authType = "Custom";
  * @var array
  */
 $authOptions = array(
-    "dsn" => "mysql://root:123456@127.0.0.1/doclib",
+//    "dsn" => "mysql://root:123456@127.0.0.1/doclib2",
     "table" => "jos_users"
 );
 
@@ -172,4 +180,12 @@ $authOptions = array(
  * @var boolean
  */
 $authDebug = false;
+
+$enableRegistration = false;
+
+/**** joomla integration **/
+$joomlaHome = array (
+    'url' => "http://localhost:8080/dl2",
+    'title' => 'Joomla title'
+);
 ?>
